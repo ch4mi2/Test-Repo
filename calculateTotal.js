@@ -1,6 +1,6 @@
-function calculateTotal(price, quantity) {
-    return price * quantity;
-  }
-  
-  module.exports = { calculateTotal };
-  
+function calculateTotal(price, quantity, discount = 0) {
+  const total = price * quantity;
+  return total - (total * discount); // Applying discount
+}
+
+module.exports = { calculateTotal };
